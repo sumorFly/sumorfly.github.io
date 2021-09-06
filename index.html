@@ -1,0 +1,433 @@
+
+ <!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>SumorFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="fly">
+    
+
+    
+    <meta name="description" content="web 编程 javascript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SumorFly">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="SumorFly">
+<meta property="og:description" content="web 编程 javascript">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="fly">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="alternative" href="/atom.xml" title="SumorFly" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/%02.css">
+<link rel="stylesheet" href="/.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="SumorFly" title="SumorFly"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="SumorFly">SumorFly</a></h1>
+				<h2 class="blog-motto">get better</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:example.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2021/09/03/vim/" title="vim" itemprop="url">vim</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="fly" target="_blank" itemprop="author">fly</a>
+		
+  <p class="article-time">
+    <time datetime="2021-09-03T09:54:07.111Z" itemprop="datePublished"> Published 2021-09-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h3><ul>
+<li>正常模式</li>
+<li>插入模式</li>
+<li>替换模式</li>
+<li>可视化</li>
+<li>命令模式<br><code> 可以通过ECS从任何其他模式返回正常模式 v进入可视一般模式，V进入可视行模式 :进入命令行模式 i进入插入模式 R进入替换模式</code></li>
+</ul>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p>在正常模式， 键入 i 进入插入模式。ecs 回到正常模式</p>
+<h4 id="缓存-标签-窗口"><a href="#缓存-标签-窗口" class="headerlink" title="缓存 标签 窗口"></a>缓存 标签 窗口</h4><p>vim 会维护一系列打开的文件，称为 “缓存”。 一个 Vim 会话包含一系列标签页，每个标签页包含 一系列窗口 （分隔面板）。每个窗口显示一个缓存。 跟网页浏览器等其他你熟悉的程序不一样的是， 缓存和窗口不是一一对应的关系； 窗口只是视角。 一个缓存可以在 多个 窗口打开，甚至在同一 个标签页内的多个窗口打开。这个功能其实很好用， 比如在查看同一个文件的不同部分的时候。</p>
+<h4 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h4><ul>
+<li>:q 退出 （关闭窗口）</li>
+<li>:w 保存 （写）</li>
+<li>:wq 保存然后退出</li>
+<li>:e {文件名} 打开要编辑的文件</li>
+<li>:ls 显示打开的缓存</li>
+<li>:help {标题}打开帮助文档</li>
+<li>:help :w 打开 :w 命令的帮助文档</li>
+<li>:help w 打开 w 移动的帮助文档</li>
+</ul>
+<h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><ul>
+<li>基本移动: hjkl （左， 下， 上， 右）</li>
+<li>词： w （下一个词）， b （词初）， e （词尾）</li>
+<li>行： 0 （行初）， ^ （第一个非空格字符）， $ （行尾）</li>
+<li>屏幕： H （屏幕首行）， M （屏幕中间）， L （屏幕底部）</li>
+<li>翻页： Ctrl-u （上翻）， Ctrl-d （下翻）</li>
+<li>文件： gg （文件头）， G （文件尾）</li>
+<li>行数： :{行数}<CR> 或者 {行数}G ({行数}为行数)</li>
+<li>杂项： % （找到配对，比如括号或者 /* */ 之类的注释对）</li>
+<li>查找：f{字符}，t{字符}，F{字符}，T{字符}</li>
+<li>查找/到 向前/向后 在本行的{字符}</li>
+<li>, / ; 用于导航匹配</li>
+<li>搜索: /{正则表达式}, n / N 用于导航匹配</li>
+</ul>
+<h4 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h4><ul>
+<li>i 进入插入模式</li>
+<li>但是对于操纵/编辑文本，不单想用退格键完成</li>
+<li>O / o 在之上/之下插入行</li>
+<li>d{移动命令}删除 {移动命令}</li>
+<li>例如， dw 删除词, d$ 删除到行尾, d0 删除到行头。</li>
+<li>c{移动命令}改变 {移动命令}</li>
+<li>例如， cw 改变词</li>
+<li>比如 d{移动命令} 再 i</li>
+<li>x 删除字符 （等同于 dl）</li>
+<li>s 替换字符 （等同于 xi）</li>
+<li>可视化模式 + 操作</li>
+<li>选中文字, d 删除 或者 c 改变</li>
+<li>u 撤销, <C-r> 重做</li>
+<li>y 复制 / “yank” （其他一些命令比如 d 也会复制）</li>
+<li>p 粘贴</li>
+<li>更多值得学习的: 比如 ~ 改变字符的大小写</li>
+</ul>
+<h4 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h4><ul>
+<li>3w 向前移动三个词</li>
+<li>5j 向下移动 5 行</li>
+<li>7dw 删除 7 个词</li>
+</ul>
+<h4 id="修饰语"><a href="#修饰语" class="headerlink" title="修饰语"></a>修饰语</h4><ul>
+<li>你可以用修饰语改变 “名词” 的意义。修饰语有 i， 表示 “内部” 或者 “在内“， 和 a， 表示 ”周围“。</li>
+<li>ci( 改变当前括号内的内容</li>
+<li>ci[ 改变当前方括号内的内容</li>
+<li>da’ 删除一个单引号字符窗， 包括周围的单引号</li>
+</ul>
+<h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h3><h4 id="搜索和替换"><a href="#搜索和替换" class="headerlink" title="搜索和替换"></a>搜索和替换</h4><p>:s （替换） 命令</p>
+<ul>
+<li>%s/foo/bar/g ==&gt;在整个文件中将 foo 全局替换成 bar</li>
+<li>%s/[._]((._))/\1/g ==&gt;将有命名的 Markdown 链接替换成简单 URLs</li>
+</ul>
+<h4 id="多窗口"><a href="#多窗口" class="headerlink" title="多窗口"></a>多窗口</h4><ul>
+<li>用 :sp / :vsp 来分割窗口</li>
+<li>同一个缓存可以在多个窗口中显示</li>
+</ul>
+<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><ul>
+<li>vimtutor 是一个 Vim 安装时自带的教程</li>
+<li><a target="_blank" rel="noopener" href="https://vim-adventures.com/">Vim Adventures</a> 是一个学习使用 Vim 的游戏</li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021 
+		
+		<a href="/about" target="_blank" title="fly">fly</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>
